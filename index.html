@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div id="main">
+        <div id="page1">
+            <div id="box">
+                <h3>To-Do List</h3>
+                <i class="ri-list-check-3"></i>
+                <input type="text" id="input" placeholder="Add Your Task">
+                <button onclick="add()">Add Task</button>
+                <ul id="task"></ul>
+                
+                <h3>TASKS</h3>
+                <ul id="container"></ul>
+                <h3>IMPORTANT</h3>
+                <ul id="important"></ul>
+                <h3>COMPLETED</h3>
+                
+                <ul id="completed"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

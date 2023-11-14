@@ -1,0 +1,190 @@
+@font-face {
+    font-family: mon;
+    src: url(./Montserrat-Regular.ttf);
+}
+*{
+    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width:100%;
+    scroll-behavior: smooth;
+}
+#page1{
+    background-color: #283618;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page1 #box{
+    height: 90vh;
+    width: 90%;
+    background-color: #606c38;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50px;
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.646);
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+#box h3{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 2vw;
+    color: #dda15e;
+    font-family: mon;
+    text-shadow: 2px 2px 4px #283618;
+    letter-spacing: 3px;
+}
+
+#box input{
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    transform: translate(-50%);
+    width: 70%;
+    height: 8%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin-top: 3%;
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.646);
+    font-size: 1.4vw;
+    color: #bc6c25;
+    font-family: mon;
+    letter-spacing: 3px;
+    padding-left: 10px;
+}
+::placeholder {
+    text-align: center;
+    color:#bc6c25;
+}
+#box button{
+    position: absolute;
+    left: 83%;
+    top: 15%;
+    transform: translate(-50%);
+    padding: 18px 25px;
+    border: none;
+    border-radius: 50px;
+    background-color: #bc6c25;
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.646);
+    font-size: 1.2vw;
+    color: white;
+    font-family: mon;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+i{
+    position: absolute;
+    top:5%;
+    left: 38%;
+    font-size: 2vw;
+    color: #dda15e;
+    text-shadow: 2px 2px 4px #283618;
+}
+
+ul{
+    margin-top: 10%;
+    margin-left: 8%;
+}
+#completed{
+    margin-top: 3%;
+}
+#important{
+    margin-top: 3%;
+}
+#container{
+    margin-top: 3%;
+}
+ul li{
+    margin-top: 1%;
+    list-style: none;
+    font-size: 1.8vw;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color:#dda15e;
+    font-family: mon;
+    letter-spacing: 3px;
+    background-color: white;
+    border-radius: 50px;
+    width: 90%;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px ;
+    width: 28px;
+    background-image: url(./sapling.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    border: 2px solid #283618;
+    background-color: #606c38;
+    border-radius: 50%;
+}
+ul li.check{
+    color: #283618;
+    text-decoration: line-through;
+    letter-spacing: 3px;
+}
+ul li.check::before{
+    background-image: url(./tree.png);
+}
+ul li span{
+    height: 40px;
+    width: 38px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+ul li p{
+    height: 40px;
+    width: 38px;
+    padding:10px;
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+ul li p::before{
+    content: "PRIORITY";
+    font-size: 1vw;
+    position: absolute;
+    left:-250%;
+    top:3%;
+    opacity: 0;
+    padding-left: 10px;
+    transition: all ease 0.5s;
+}
+ul li span:hover{
+    background-color: #606c38;
+    
+}
+ul li p:hover{
+    background-color: #606c38;
+}
+ul li p:hover::before{
+    
+    opacity: 1;
+    
+}
